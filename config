@@ -46,11 +46,12 @@ font pango:monospace 8
 floating_modifier $mod
 
 #Windows Edges
-#  hide_edge_borders both
-  new_window none
-#  smart_borders on
-#  gaps inner 10
-#  gaps outer 7
+ # hide_edge_borders both
+ # for_window [class="^.*"] border pixel 0
+ # new_window none
+ # smart_borders on
+ # gaps inner 5
+ # gaps outer 3
 
 
 
@@ -219,12 +220,10 @@ bar {
 bindsym $mod+shift+x exec i3lock
 
 #set Desktop to Bilder/desktophinter.jpg
-exec_always feh --bg-scale Bilder/desktophinter.jpg
+#exec_always feh --bg-scale Bilder/desktophinter.jpg
 
 exec gedit .config/i3/config
 bindsym $mod+ä exec .config/i3/config
 
 # The middle button over a titlebar kills the window
 #bindsym --release button2 kill
-
-
